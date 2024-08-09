@@ -1,38 +1,179 @@
-.App {
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+  background: radial-gradient(circle, #2e004d, #000033);
+  color: rgb(243, 251, 251);
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wel{
+  color:rgb(45, 210, 207) ;
+  font-size: xx-large;
+  font-weight: bolder;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.welcome-message {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 20px;
+}
+
+.welcome-message .wel {
+  font-size: 3em;
+  margin: 0;
+  animation: colorChange 8s infinite, moveIn 1s ease-out;
+}
+.welcome-message .wel span {
+  display: inline-block;
+  animation: letterIn 1s forwards;
+}
+
+/* Apply animation with a delay based on the letter's index */
+.welcome-message .wel span:nth-child(1) { animation-delay: 0s; }
+.welcome-message .wel span:nth-child(2) { animation-delay: 0.1s; }
+.welcome-message .wel span:nth-child(3) { animation-delay: 0.2s; }
+/* Add more nth-child rules as needed */
+
+/* Keyframes for letter-by-letter animation */
+@keyframes letterIn {
+  0% { transform: translateY(-100%); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+
+.welcome-message p {
+  font-size: 1.2em;
+  margin-top: 10px;
+  
+}
+@keyframes colorChange {
+  0% { color: rgb(103, 45, 210); }
+  25% { color: rgb(45, 210, 147); }
+  50% { color: rgb(45, 139, 210); }
+  75% { color: rgb(45, 210, 183); }
+  100% { color: rgb(45, 210, 207); }
+}
+
+/* Keyframes for move in animation */
+@keyframes moveIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.space {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.galaxy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.welcome-message {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  z-index: 1;
+}
+
+
+.stars, .twinkling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.stars {
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+.twinkling {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.468) 20%, transparent 80%);
+  z-index: 1;
+}
+
+.rocket {
+  position: absolute;
+  bottom: -50px;
+  width: 100px;
+  z-index: 2;
+}
+
+.rocket-lottie {
+  width: 500px;
+  height: 300px;
+}
+
+
+.welcome-message {
+  position: absolute;
+  z-index: 10;
   color: white;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.wel {
+  font-size: 3em;
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    y: -50px;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    y: 0;
   }
 }
