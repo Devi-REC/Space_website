@@ -1,0 +1,38 @@
+/* src/components/SatelliteCard.css */
+.satellite-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 12px; /* Slightly rounded corners */
+    text-align: center;
+    background-color: #555; /* Slightly lighter background for contrast */
+    max-width: 350px; /* Adjusted max-width for better layout */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-height: 100px;
+    flex: 0 0 auto; /* Prevent the card from shrinking */
+    margin: 1rem; /* Space between cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.satellite-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for images */
+    margin-bottom: 1rem; /* Space between image and text */
+}
+
+.satellite-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.satellite-card h2 {
+    color: #ffffff;
+    font-size: 1.6em; /* Slightly larger font size */
+    margin-bottom: 0.5rem; /* Space below heading */
+}
+
+.satellite-card p {
+    color: #ddd;
+    font-size: 0.9em; /* Slightly smaller font size for better readability */
+    margin: 0.5rem 0; /* Space between paragraphs */
+}
