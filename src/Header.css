@@ -10,13 +10,37 @@
     width: 100%;
     padding: 20px 30px;
 }
-
+.header nav{
+    margin-left: 20%;;
+}
 .header nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.header .logo {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.rocket-icon {
+    color: rgb(45, 210, 207);
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.site-name {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
 .header nav ul li {
     display: inline;
     margin-right: 20px;

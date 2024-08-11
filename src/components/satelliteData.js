@@ -160,7 +160,7 @@ export const satelliteData = [
       radiometer: "Very High-resolution Radiometer",
     },
     coverageArea: "Indian subcontinent",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1glkB-nqvE48gG0XunQk05ONYq1tHqn3Nmo9UGhs&usqp=CAE&s",
+    image: "https://space.skyrocket.de/img_sat/insat-2a__1.jpg",
     description: "INSAT-2B was the second satellite in the INSAT 2 Series, launched for telecommunication and meteorological observation. It was placed in a geostationary orbit at 93.5° East longitude. The satellite carried a Very High-resolution Radiometer (VHRR) capable of operating in multiple modes, a Data Collection System (DCS) for environmental information, and a Satellite Aided Search and Rescue (SASAR) system for emergency support.",
     link: "https://en.wikipedia.org/wiki/INSAT-2B",
     category: "Telecommunication and Meteorological Observation", // INSAT-2B had this dual purpose

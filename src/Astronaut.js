@@ -40,7 +40,7 @@ const Astronaut = () => {
                 <Wrapper>
                     <Title>Astronauts</Title>
                     <Desc>
-                        Explore the various astronauts and their missions.
+                    Uncover the incredible feats of astronauts who ventured into the great unknown.
                     </Desc>
                     <input
                         type="text"
