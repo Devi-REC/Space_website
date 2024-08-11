@@ -7,8 +7,9 @@ import SatelliteDetails from './components/SatelliteDetails';
 import Contact from './Contact';
 import About from './About';
 import Home from './Home';
-
+import Astronaut from './Astronaut';
 import Satellite from './Satellite';
+import AstronautDetail from './components/AstronautDetail';
 
 function App() {
   return (
@@ -16,10 +17,11 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='/astronaut' element={<Astronaut />} />
         <Route path='/satellite' element={<Satellite />} />
         <Route path="/satellite/:id" element={<SatelliteDetails />} />
-        
+        <Route path="/astronaut/:id" element={<AstronautDetail />} />
+
       </Routes>
     </BrowserRouter>
   );

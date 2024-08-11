@@ -28,6 +28,7 @@ const Satellite = () => {
 
     return (
         <ThemeProvider theme={orangeTheme}>
+            <GalaxyAnimation />
             <Container id="satellites">
                 <GalaxyAnimation />
                 <Header />

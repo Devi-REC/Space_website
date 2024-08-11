@@ -10,7 +10,7 @@ font-family: 'Poppins', sans-serif;
     z-index: 1;
     align-items: center;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 98%, 0 100%);
-    padding-top: 80px; /* Add padding to avoid overlap */
+    padding-top: 50px; /* Add padding to avoid overlap */
 `;
 
 export const Wrapper = styled.div`
@@ -63,7 +63,10 @@ export const CardContainer = styled.div`
     align-items: center;
     gap: 28px;
     flex-wrap: wrap;
-    max-height:500px; /* Set a max-height */
+    box-shadow: 
+        1px 4px 8px rgb(45, 210, 207), /* Shadow on bottom and right */
+        0 -4px 8px rgb(45, 210, 207); /* Shadow on top */
+    max-height:550px; /* Set a max-height */
     overflow-y: auto;  /* Enable vertical scrolling */
     padding: 10px;
     border: 0.1px solid rgb(45, 210, 207);
@@ -75,7 +78,7 @@ export const CardContainer = styled.div`
 export const ToggleButtonGroup = styled.div`
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 4px;
     margin-bottom: 20px;
 `;
 
@@ -94,6 +97,9 @@ export const ToggleButton = styled.button`
     &:hover {
         background-color: ${({ theme }) => theme.primary};
         color: ${({ theme }) => theme.white};
+         box-shadow: 
+        1px 4px 8px rgb(45, 210, 207), /* Shadow on bottom and right */
+        0 -4px 8px rgb(45, 210, 207);
     }
 `;
 

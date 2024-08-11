@@ -12,7 +12,7 @@ function Header() {
                     <ul>
                         <li><Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link></li>
                       
-                        <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact</Link></li>
+                        <li><Link to="/astronaut" className={location.pathname === '/contact' ? 'active' : ''}>Astronaut</Link></li>
                         <li><Link to="/satellite" className={location.pathname === '/satellite' ? 'active' : ''}>Satellite</Link></li>
                         <li><Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About</Link></li>
                      

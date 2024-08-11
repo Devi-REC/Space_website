@@ -1,10 +1,11 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import { satelliteData } from './satelliteData'; // Ensure this path is correct
-import GalaxyAnimation from '../GalaxyAnimation';
+import { AstronautData } from './AstronautData'; // Import the astronaut data
+import GalaxyAnimation from '../GalaxyAnimation'; // Assuming you want to reuse this animation
+import Astronaut from '../Astronaut';
 
-// Styles from your previous component
+// Styled components
 const Container = styled.div`
   width: 100%;
   height: 100%;
@@ -17,11 +18,11 @@ const Container = styled.div`
   display: flex;
   align-items: top;
   justify-content: center;
-  overflow: hidden; /* Prevent entire page from scrolling */
+  overflow: hidden;
   transition: all 0.5s ease;
   box-shadow: 
-        1px 4px 8px rgb(45, 210, 207), /* Shadow on bottom and right */
-        0 -4px 8px rgb(45, 210, 207); /* Shadow on top */
+        1px 4px 8px rgb(45, 210, 207),
+        0 -4px 8px rgb(45, 210, 207);
 `;
 
 const Wrapper = styled.div`
@@ -30,11 +31,11 @@ const Wrapper = styled.div`
   border-radius: 16px;
   margin: 50px 12px 20px 12px;
   box-shadow: 
-        1px 4px 8px rgb(45, 210, 207), /* Shadow on bottom and right */
-        0 -4px 8px rgb(45, 210, 207); /* Shadow on top */
+        1px 4px 8px rgb(45, 210, 207),
+        0 -4px 8px rgb(45, 210, 207);
   height: max-content;
-  max-height: 86vh; /* Limit the height of the wrapper */
-  overflow-y: auto; /* Make wrapper scrollable */
+  max-height: 86vh;
+  overflow-y: auto;
   border: 0.1px solid rgb(45, 210, 207);
   background-color: ${({ theme }) => theme.darkblack};
   color: ${({ theme }) => theme.text_primary};
@@ -45,9 +46,8 @@ const Wrapper = styled.div`
   position: relative;
 `;
 
-
 const Title = styled.div`
-font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 28px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
@@ -69,15 +69,27 @@ const Desc = styled.div`
     margin: 6px 6px;
   }
 `;
+
 const Descrip = styled.div`
-   font-family: 'Poppins', sans-serif;
-   background-color:black;
-   border-radius: 12px; /* Rounded corners */
+  font-family: 'Poppins', sans-serif;
+  background-color: black;
+margin: 8px 0px;
+  padding: 10px;
+  border: 2px solid rgb(45, 210, 207);
+  border-radius: 12px;
+  border-radius: 12px;
+ 
+  margin-bottom:3%;
   box-shadow: 0 4px 8px rgba(45, 210, 207, 0.4);
-  line-height: 2.6; 
+  line-height: 2.6;
+ @media only screen and (max-width: 600px) {
+    margin: 4px 0px;
+    padding: 8px;
+  }
 `;
+
 const Image = styled.img`
- max-width: 100%;  /* Ensures the image doesn’t overflow */
+  max-width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 12px;
@@ -88,7 +100,7 @@ const Image = styled.img`
 const Label = styled.div`
   font-size: 20px;
   font-weight: 600;
-  color: ${({ theme }) => theme.text_primary};
+  color:rgb(45, 210, 207);
   margin: 8px 6px;
   @media only screen and (max-width: 600px) {
     font-size: 16px;
@@ -97,22 +109,20 @@ const Label = styled.div`
 `;
 
 const Tags = styled.div`
-font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   display: flex;
   flex-wrap: wrap;
   margin: 8px 0px;
   padding: 10px;
-  border: 2px solid rgb(45, 210, 207); /* Add border */
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(45, 210, 207, 0.4); /* Add box shadow */
-  background-color: rgba(45, 210, 207, 0.1); /* Subtle background color */
-
+  border: 2px solid rgb(45, 210, 207);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(45, 210, 207, 0.4);
+  background-color: rgba(45, 210, 207, 0.1);
   @media only screen and (max-width: 600px) {
     margin: 4px 0px;
     padding: 8px;
   }
 `;
-
 
 const Tag = styled.div`
   font-size: 14px;
@@ -121,17 +131,16 @@ const Tag = styled.div`
   margin: 4px;
   padding: 4px 8px;
   border-radius: 8px;
-  background-color: ${({ theme }) => `${theme.primary}20`}; /* Lighten color if needed */
+  background-color: ${({ theme }) => `${theme.primary}20`};
   @media only screen and (max-width: 600px) {
     font-size: 12px;
   }
-     strong {
+
+  strong {
     color: rgb(45, 210, 207);
-    font-size:18px;
-    margin-right:5px
-     /* Change the color of the text inside <strong> */
+    font-size: 18px;
+    margin-right: 5px;
   }
-    
 `;
 const WikipediaLink = styled.a`
   font-size: 16px;
@@ -154,67 +163,73 @@ const WikipediaLink = styled.a`
   }
 `;
 
-
 const BackButton = styled.div`
   position: absolute;
   top: 10px;
   left: 10px;
   font-size: 20px;
   font-weight: 600;
-  color:  rgb(45, 210, 207);
+  color: rgb(45, 210, 207);
   cursor: pointer;
   background-color: ${({ theme }) => theme.darkblack};
-  border: 2px solid  rgb(45, 210, 207);
+  border: 2px solid rgb(45, 210, 207);
   padding: 10px 15px;
   border-radius: 8px;
   transition: background-color 0.3s, color 0.3s, transform 0.2s;
 
- &:hover {
-        background-color: ${({ theme }) => theme.primary};
-        color: ${({ theme }) => theme.white};
-    }
+  &:hover {
+    background-color: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.white};
+  }
 
   &:active {
-    background-color:${({ theme }) => theme.primary};
+    background-color: ${({ theme }) => theme.primary};
     transform: scale(0.95);
   }
 `;
 
-const SatelliteDetails = () => {
+const AstronautDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const satelliteId = parseInt(id, 10); // Convert to number
-  const satellite = satelliteData.find((sat) => sat.id === satelliteId);
+  const astronautId = parseInt(id, 10);
+  const astronaut = AstronautData.find((astro) => astro.id === astronautId);
 
-  if (!satellite) return <p>Satellite not found</p>;
+  if (!astronaut) return <p>Astronaut not found</p>;
 
   return (
     <Container>
-        <GalaxyAnimation />
-        
+      <GalaxyAnimation />
+
       <Wrapper>
-        <BackButton onClick={() => navigate('/satellite')}>← Back</BackButton>
-        <Title>{satellite.name}</Title>
-        <Image src={satellite.image} alt={`Image of ${satellite.name}`} />
+        <BackButton onClick={() => navigate('/astronaut')}>← Back</BackButton>
+        <Title>{astronaut.name}</Title>
+        <Image src={astronaut.imageUrl} alt={`Image of ${astronaut.name}`} />
         <Tags>
-          <Tag><strong>Mission Type:</strong> {satellite.missionType}</Tag>
-          <Tag><strong>Operator:</strong> {satellite.operator}</Tag>
-          <Tag><strong>Launch Mass:</strong> {satellite.launchMass}</Tag>
-          <Tag><strong>Launch Date:</strong> {satellite.launchDate}</Tag>
-        
-          <Tag><strong>Launch Site:</strong> {satellite.launchSite}</Tag>
+          <Tag><strong>Birthdate:</strong> {astronaut.birthdate}</Tag>
+          <Tag><strong>Birthplace:</strong> {astronaut.birthplace}</Tag>
+          <Tag><strong>Occupation:</strong> {astronaut.occupation}</Tag>
+          <Tag><strong>Alma Mater:</strong> {astronaut.almaMater}</Tag>
+          <Tag><strong>Time in Space:</strong> {astronaut.timeInSpace}</Tag>
+          <Tag><strong>Missions:</strong> {astronaut.missions}</Tag>
         </Tags>
         <Descrip>
-        <Label>Description</Label>
-        <Desc>{satellite.description}</Desc>
+          <Label>Notable Achievements</Label>
+          <Desc>{astronaut.notableAchievements}</Desc>
+        
+          <Label>Personal Life</Label>
+          <Desc><strong>Spouse:</strong> {astronaut.spouse}</Desc>
+          <Desc><strong>Children:</strong> {astronaut.children}</Desc>
         </Descrip>
-        <WikipediaLink href={satellite.link} target="_blank" rel="noopener noreferrer">
+        <Descrip>
+          <Label>Quote</Label>
+          <Desc>{astronaut.quote}</Desc>
+        </Descrip>
+        <WikipediaLink href={astronaut.link} target="_blank" rel="noopener noreferrer">
           Learn more on Wikipedia
         </WikipediaLink>
       </Wrapper>
-      
     </Container>
   );
 };
 
-export default SatelliteDetails;
+export default AstronautDetail;

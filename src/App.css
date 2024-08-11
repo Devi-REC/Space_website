@@ -3,13 +3,13 @@ body, html {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
-  background: radial-gradient(circle, #2e004d, #000033);
+  background:black;
   color: rgb(243, 251, 251);
   text-align: center;
 
 }
 .wel{
-  color:rgb(45, 210, 207) ;
+  color:rgba(4, 21, 20, 0.79) ;
   font-size: xx-large;
   font-weight: bolder;
 }
@@ -52,6 +52,9 @@ body, html {
 .welcome-message p {
   font-size: 1.2em;
   margin-top: 10px;
+  margin-bottom: 10px;
+
+ 
   
 }
 @keyframes colorChange {
@@ -61,7 +64,11 @@ body, html {
   75% { color: rgb(45, 210, 183); }
   100% { color: rgb(45, 210, 207); }
 }
-
+.para{
+  color: white;
+  font-size: 25px;
+    font-weight: bolder;
+}
 /* Keyframes for move in animation */
 @keyframes moveIn {
   0% {
@@ -91,7 +98,7 @@ body, html {
 
 .welcome-message {
   position: absolute;
-  top: 20%;
+  top:10%;
   width: 100%;
   z-index: 1;
 }

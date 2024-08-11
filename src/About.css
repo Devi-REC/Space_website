@@ -1,43 +1,50 @@
 .section {
-    padding: 5rem 1rem;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    background-color: #1a1a1a;
     position: relative;
-}
-
-h2, p {
-    margin: 1rem 0;
-    font-size: 2em;
-    color: rgb(45, 210, 207); /* Apply the color to text */
-}
-
-.line-drawing-demo {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    width: 80%;
-    height: 80%;
+    padding: 20px;
+    background: #000; /* Black background for space theme */
+    color: #fff; /* White text for contrast */
+  }
+  
+  .head{
+    color:rgb(45, 210, 207) ;
+  }
+  
+  .scrollable-content {
     display: flex;
+    top: 0%;
     justify-content: center;
     align-items: center;
-}
-
-.line {
-    stroke: rgb(45, 210, 207); /* Apply the color to the SVG stroke */
-    stroke-dasharray: 200; /* Adjust according to path length */
-    stroke-dashoffset: 200; /* Initial offset value */
-}
-
-.staggered-text {
-    z-index: 1; /* Ensure text is above SVG */
-}
-
-.el {
-    display: inline-block; /* Ensures proper animation */
-    color: rgb(45, 210, 207); /* Apply the color to animated text */
-}
+    gap: 28px;
+    left: 30%;
+    flex-wrap: wrap;
+    box-shadow: 
+        1px 4px 8px rgb(45, 210, 207), /* Shadow on bottom and right */
+        0 -4px 8px rgb(45, 210, 207); /* Shadow on top */
+    max-height:550px; /* Set a max-height */
+    overflow-y: auto;  /* Enable vertical scrolling */
+    padding: 10px;
+    border: 0.1px solid rgb(45, 210, 207);
+    width: 70%; /* Ensure it takes up the full width */
+    @media (max-width: 860px) {
+        flex-direction: column;
+    }
+  }
+  .about{
+    margin-bottom: 10%;
+  }
+  
+  .scrollable-content h2 {
+    margin-top: 0;
+    font-size: 2.5em; /* Adjust font size if needed */
+    text-align: center; /* Center align heading text */
+  }
+  
+  .scrollable-content p {
+    font-size: 1.5em; /* Adjust font size if needed */
+    line-height: 1.6;
+    margin-top: 10%;
+    max-height: 70%; /* Adjust to fit your design */
+    text-align: center; /* Center align paragraph text */
+    max-width: 90%; /* Increase max-width if needed */
+  }
+  
