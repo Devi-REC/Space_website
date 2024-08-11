@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Card = styled.div`
     width: 330px;
     height: 260px;
-    background-color: ${({ theme }) => theme.darkblack};
+   
     cursor: pointer;
     border-radius: 10px;
     

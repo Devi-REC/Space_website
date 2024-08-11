@@ -165,11 +165,10 @@ const BackButton = styled.div`
   border-radius: 8px;
   transition: background-color 0.3s, color 0.3s, transform 0.2s;
 
-  &:hover {
-    background-color: ${({ theme }) => theme.primary};
-    color: ${({ theme }) => theme.primary};
-    transform: scale(1.05);
-  }
+ &:hover {
+        background-color: ${({ theme }) => theme.primary};
+        color: ${({ theme }) => theme.white};
+    }
 
   &:active {
     background-color:${({ theme }) => theme.primary};

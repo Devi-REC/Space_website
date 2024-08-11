@@ -21,7 +21,7 @@ export const Wrapper = styled.div`
     flex-direction: column;
      height: max-content;
   max-height: 86vh; /* Limit the height of the wrapper */
-  overflow-y: auto; /* Make wrapper scrollable */
+  /* Make wrapper scrollable */
  
     width: 100%;
     max-width: 1350px;
@@ -71,4 +71,37 @@ export const CardContainer = styled.div`
     @media (max-width: 960px) {
         flex-direction: column;
     }
+`;
+export const ToggleButtonGroup = styled.div`
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+`;
+
+// Style for each toggle button
+export const ToggleButton = styled.button`
+    background-color: ${({ active, theme }) => active ? theme.primary : theme.darkblack};
+    color: ${({ active, theme }) => active ? theme.white : theme.text_primary};
+    border: 1px solid ${({ theme }) => theme.primary};
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    
+    &:hover {
+        background-color: ${({ theme }) => theme.primary};
+        color: ${({ theme }) => theme.white};
+    }
+`;
+
+// Divider between buttons
+export const Divider = styled.span`
+    display: inline-block;
+    width: 1px;
+    height: 24px;
+   
+    margin: 0 8px;
 `;
