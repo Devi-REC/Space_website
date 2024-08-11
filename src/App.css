@@ -1,11 +1,12 @@
 body, html {
   height: 100%;
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
   overflow: hidden;
   background: radial-gradient(circle, #2e004d, #000033);
   color: rgb(243, 251, 251);
   text-align: center;
+
 }
 .wel{
   color:rgb(45, 210, 207) ;

@@ -1,31 +1,56 @@
 // src/components/satelliteData.js
 
 export const satelliteData = [
-    {
-      id: 1,
-      name: "GSAT-30",
-      missionType: "Communications",
-      operator: "ISRO",
-      launchDate: "16 January 2020",
-      launchMass: "3,357 kg (7,401 lb)",
-      power: "6000 watts",
-      launchVehicle: "Ariane 5 ECA (VA-251)",
-      launchSite: "Kourou, ELA-3",
-      orbit: {
-        referenceSystem: "Geocentric orbit",
-        regime: "Geostationary orbit",
-        longitude: "83.0° East",
-      },
-      transponders: {
-        C_band: 12,
-        Ku_band: 12,
-      },
-      coverageArea: "Asia, Australia",
-      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Render_of_GSAT-30_spacecraft_in_deployed_configuration.png/450px-Render_of_GSAT-30_spacecraft_in_deployed_configuration.png",
-      description: "GSAT-30 is a communication satellite developed by ISRO. It enhances telecommunication and broadcasting services for Asia and Australia. The satellite is equipped with C-band and Ku-band transponders, providing a wide range of communication services including television broadcasting and telecommunication.",
+  {
+    id: 1,
+    name: "Aryabhata",
+    missionType: "Astrophysics",
+    operator: "ISRO",
+    launchDate: "19 April 1975",
+    launchMass: "360 kg (790 lb)",
+    power: "46 W",
+    launchVehicle: "Kosmos-3M",
+    launchSite: "Kapustin Yar 107/2",
+    orbit: {
+      referenceSystem: "Geocentric",
+      regime: "Low Earth",
+      perigeeAltitude: "563 km (350 mi)",
+      apogeeAltitude: "619 km (385 mi)",
+      inclination: "50.7 degrees",
+      period: "96.46 minutes"
     },
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Aryabhata_Satellite.jpg/405px-Aryabhata_Satellite.jpg",
+    description: "Aryabhata was India's first satellite, launched on 19 April 1975. Built by ISRO and launched by the Soviet Union as part of the Soviet Interkosmos programme, Aryabhata was designed to conduct experiments in X-ray astronomy, aeronomics, and solar physics. The spacecraft was a 26-sided polyhedron with solar cells on all faces except the top and bottom. Power failure halted experiments after four days, and all signals were lost after five days. The satellite remained active until March 1981 and re-entered Earth's atmosphere on 10 February 1992 due to orbital decay.",
+    link: "https://en.wikipedia.org/wiki/Aryabhata_(satellite)"
+  },
+  
+  {
+    id: 2,
+    name: "GSAT-30",
+    missionType: "Communications",
+    operator: "ISRO",
+    launchDate: "16 January 2020",
+    launchMass: "3,357 kg (7,401 lb)",
+    power: "6000 watts",
+    launchVehicle: "Ariane 5 ECA (VA-251)",
+    launchSite: "Kourou, ELA-3",
+    orbit: {
+      referenceSystem: "Geocentric orbit",
+      regime: "Geostationary orbit",
+      longitude: "83.0° East",
+    },
+    transponders: {
+      C_band: 12,
+      Ku_band: 12,
+    },
+    coverageArea: "Asia, Australia",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Render_of_GSAT-30_spacecraft_in_deployed_configuration.png/450px-Render_of_GSAT-30_spacecraft_in_deployed_configuration.png",
+    description: "GSAT-30 is a communication satellite developed by ISRO. It enhances telecommunication and broadcasting services for Asia and Australia. The satellite is equipped with C-band and Ku-band transponders, providing a wide range of communication services including television broadcasting and telecommunication.",
+    link: "https://en.wikipedia.org/wiki/GSAT-30", // Added link to Wikipedia
+  },
+  
     {
-      id: 2,
+      id: 3,
       name: "GSAT-31",
       missionType: "Communication",
       operator: "ISRO",
@@ -55,9 +80,10 @@ export const satelliteData = [
       },
       image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/GSAT-31_render_02.png/390px-GSAT-31_render_02.png",
       description: "GSAT-31 is a communication satellite designed to extend ISRO's communication capabilities. It features Ku-band transponders and provides services such as direct-to-home (DTH) broadcasting and broadband connectivity. The satellite has a high capacity and is aimed at improving communication infrastructure across India.",
+      link:"https://en.wikipedia.org/wiki/GSAT-31",
     },
     {
-      id: 3,
+      id: 4,
       name: "GSAT-11",
       missionType: "Communication",
       operator: "ISRO",
@@ -79,9 +105,10 @@ export const satelliteData = [
       coverageArea: "India and surrounding regions",
       image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/GSAT-11_in_cleanroom_01.jpg/390px-GSAT-11_in_cleanroom_01.jpg",
       description: "GSAT-11 is a high-throughput communication satellite launched by ISRO. It supports a variety of communication services including broadband, telecommunication, and broadcasting. The satellite features an advanced transponder system that includes both Ku-band and Ka-band transponders, providing high-speed data transmission and coverage across India.",
+      link:"https://en.wikipedia.org/wiki/GSAT-11",
     },
     {
-      id: 4,
+      id: 5,
       name: "INSAT-1B",
       missionType: "Communications",
       operator: "INSAT",
@@ -103,9 +130,10 @@ export const satelliteData = [
       },
       image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Insat-1B.jpg/390px-Insat-1B.jpg",
       description: "INSAT-1B was a communication satellite in the INSAT series, launched by ISRO. It was designed to provide telecommunication, television broadcasting, and meteorological services. The satellite's C-band and S-band transponders enabled it to serve a variety of communication needs across India and surrounding regions.",
+      link:"https://en.wikipedia.org/wiki/INSAT-1B",
     },
     {
-        id: 5,
+        id: 6,
         name: "INSAT-2B",
         missionType: "Telecommunication and Meteorological Observation",
         operator: "INSAT",
@@ -128,9 +156,10 @@ export const satelliteData = [
         coverageArea: "Indian subcontinent",
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1glkB-nqvE48gG0XunQk05ONYq1tHqn3Nmo9UGhs&usqp=CAE&s",
         description: "INSAT-2B was the second satellite in the INSAT 2 Series, launched for telecommunication and meteorological observation. It was placed in a geostationary orbit at 93.5° East longitude. The satellite carried a Very High-resolution Radiometer (VHRR) capable of operating in multiple modes, a Data Collection System (DCS) for environmental information, and a Satellite Aided Search and Rescue (SASAR) system for emergency alerts. INSAT-2B had an operational lifespan of 11 years and was deactivated on 1 July 2004.",
+        link:"https://en.wikipedia.org/wiki/INSAT-2B",
       },
       {
-        id: 6,
+        id: 7,
         name: "INSAT-2A",
         missionType: "Multipurpose Communication & Meteorology",
         operator: "INSAT",
@@ -151,9 +180,10 @@ export const satelliteData = [
         coverageArea: "India",
         image: "https://space.skyrocket.de/img_sat/insat-2a__1.jpg",
         description: "INSAT-2A was the first Indian multipurpose satellite, launched in August 1992. It was designed for meteorology, satellite-based search and rescue, and multipurpose communication including telecommunication, television broadcasting, and disaster warning. The satellite was placed in a geostationary orbit at 74° East longitude. It featured a Very High-resolution Radiometer (VHRR) with 2 km resolution in the visible band and 8 km resolution in the infra-red band. INSAT-2A had a mission life of 7 years and was deactivated on 30 May 2002.",
+        link:"https://en.wikipedia.org/wiki/INSAT-2A",
       },
       {
-        id: 7,
+        id: 8,
         name: "INSAT-1D",
         missionType: "Communications, Cloud Observation",
         operator: "INSAT",
@@ -174,7 +204,8 @@ export const satelliteData = [
         },
         coverageArea: "India",
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Insat-1B.jpg/390px-Insat-1B.jpg",
-        description: "INSAT-1D was the fourth and final satellite of the INSAT-1 series, launched on 12 June 1990. It was designed for communications and cloud observation, featuring 12 C-band transponders for telephone and data communications, and two S-band transponders for direct broadcast service. The satellite was equipped with a Very High-resolution Radiometer (VHRR) for meteorological imagery, aiding in long-term weather forecasting, storm warning, and resource management. INSAT-1D was crucial for maintaining India's telecommunication infrastructure and was decommissioned on 14 May 2002 after a mission life of 7 years."
+        description: "INSAT-1D was the fourth and final satellite of the INSAT-1 series, launched on 12 June 1990. It was designed for communications and cloud observation, featuring 12 C-band transponders for telephone and data communications, and two S-band transponders for direct broadcast service. The satellite was equipped with a Very High-resolution Radiometer (VHRR) for meteorological imagery, aiding in long-term weather forecasting, storm warning, and resource management. INSAT-1D was crucial for maintaining India's telecommunication infrastructure and was decommissioned on 14 May 2002 after a mission life of 7 years.",
+        link:"https://en.wikipedia.org/wiki/INSAT-1D",
       }
       
       

@@ -2,6 +2,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import SatelliteDetails from './components/SatelliteDetails';
 
 import Contact from './Contact';
 import About from './About';
@@ -17,6 +18,7 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/satellite' element={<Satellite />} />
+        <Route path="/satellite/:id" element={<SatelliteDetails />} />
         
       </Routes>
     </BrowserRouter>

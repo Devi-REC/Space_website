@@ -8,9 +8,9 @@ import { ThemeProvider } from 'styled-components';
 
 const Satellite = () => {
     const orangeTheme = {
-        text_primary: '#FFA500',
-        text_secondary: '#FFA500',
-        card: '#FFA500',
+        text_primary: 'rgb(45, 210, 207)',
+        text_secondary: 'rgb(45, 210, 207)',
+        card: 'rgb(45, 210, 207);',
     };
 
     return (
@@ -29,6 +29,7 @@ const Satellite = () => {
                         ))}
                     </CardContainer>
                 </Wrapper>
+               
             </Container>
         </ThemeProvider>
     );
