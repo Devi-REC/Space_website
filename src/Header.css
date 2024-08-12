@@ -60,18 +60,30 @@ nav ul li a {
 
 nav ul li a.active {
     color: rgb(45, 210, 207);
-    border-bottom: 2px solid rgb(45, 210, 207);
+    border-bottom: 2px solid rgb(12, 14, 13);
 }
 
 /* Media Query for Mobile View */
-@media (max-width: 768px) {
+/* General Styles */
+.menu-icon {
+    display: none; /* Hidden by default */
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
     .logo {
-        margin-right: 15%;
+        margin-right: 15%; /* Adjust the margin as needed */
     }
 
     /* Show the menu icon */
     .menu-icon {
         display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.5rem;
+        cursor: pointer;
     }
 
     /* Hide the navigation menu by default */
@@ -79,6 +91,12 @@ nav ul li a.active {
         display: none;
         flex-direction: column;
         width: 100%;
+        margin-left: 0; /* Adjust as needed */
+        position: absolute;
+        top: 60px; /* Adjust based on your layout */
+        right: 0;
+        background-color: #041514a9;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
     }
 
     /* Show the navigation menu when the icon is clicked */
@@ -89,6 +107,8 @@ nav ul li a.active {
     nav ul {
         flex-direction: column;
         width: 100%;
+        padding: 0;
+        margin: 0;
     }
 
     nav ul li {
@@ -101,3 +121,4 @@ nav ul li a.active {
         font-weight: bold;
     }
 }
+
