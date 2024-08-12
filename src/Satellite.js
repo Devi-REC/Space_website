@@ -3,7 +3,7 @@ import GalaxyAnimation from './GalaxyAnimation';
 import Header from './Header';
 import { satelliteData } from './components/satelliteData';
 import SatelliteCard from './components/SatelliteCard'; 
-import { Container, Wrapper, Title, Desc, CardContainer, ToggleButtonGroup, ToggleButton, Divider } from './ProjectsStyle'; // Import the styled-components
+import { Container, Wrapper, Title, Desc, CardContainer, ToggleButtonGroup, ToggleButton, Divider, CardCont } from './ProjectsStyle'; // Import the styled-components
 import { ThemeProvider } from 'styled-components';
 
 const Satellite = () => {
@@ -37,6 +37,8 @@ const Satellite = () => {
                     <Desc>
                         Explore the various satellites and their missions.
                     </Desc>
+                    <CardCont>
+                        
                     <ToggleButtonGroup>
                         {['all', 'Mission failure', 'Extra-terrestrial missions', 'Geosynchronous Orbit', 'Geostationary Orbit', 'Crewed spacecraft'].map((category) => (
                             <>
@@ -51,6 +53,7 @@ const Satellite = () => {
                             </>
                         ))}
                     </ToggleButtonGroup>
+                    </CardCont>
                     <CardContainer>
                         {filteredSatellites.map((satellite) => (
                             <SatelliteCard key={satellite.id} satellite={satellite} />

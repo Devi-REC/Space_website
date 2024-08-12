@@ -1,61 +1,103 @@
+/* Header.css */
 .header-container {
+    width: 100%;
     position: fixed;
     top: 0;
-    width: 100%;
     z-index: 1000;
-    font-family: 'Poppins', sans-serif;
+    background-color: #041514a9;
 }
 
 .header {
-    width: 100%;
-    padding: 20px 30px;
-}
-.header nav{
-    margin-left: 20%;;
-}
-.header nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-.header-container {
     display: flex;
-    justify-content: space-between;
+   
     align-items: center;
+    padding: 10px 20px;
 }
 
-.header .logo {
+.logo {
     display: flex;
     align-items: center;
-    padding-left: 20px;
+    color: white;
+    margin-right: 24%;
 }
 
 .rocket-icon {
-    color: rgb(45, 210, 207);
-    font-size: 24px;
     margin-right: 10px;
 }
 
 .site-name {
-    color: white;
     font-size: 24px;
     font-weight: bold;
-}
-.header nav ul li {
-    display: inline;
-    margin-right: 20px;
+    color: rgb(45, 210, 207);
 }
 
-.header nav ul li a {
+/* Menu Icon */
+.menu-icon {
+    display: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 16px;
+
+}
+
+nav ul li a {
     text-decoration: none;
     color: white;
+    font-size: 18px;
     font-weight: bold;
 }
 
-.header nav ul li a:hover {
-    color: #6d8f94;
+nav ul li a.active {
+    color: rgb(45, 210, 207);
+    border-bottom: 2px solid rgb(45, 210, 207);
 }
 
-.header nav ul li a.active {
-    color: rgb(45, 210, 207) /* Change color for the active link */
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+    .logo {
+        margin-right: 15%;
+    }
+
+    /* Show the menu icon */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Hide the navigation menu by default */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Show the navigation menu when the icon is clicked */
+    .nav-menu.open {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        font-weight: bold;
+    }
 }

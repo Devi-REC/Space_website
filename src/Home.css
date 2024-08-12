@@ -2,3 +2,53 @@
     font-size: larger;
     font-weight: bolder;
 }
+/* App.css */
+.welcome-message {
+    position: relative;
+    padding: 50px;
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+.wel {
+    font-size: 3rem; /* Adjust as needed */
+    line-height: 1.2;
+    margin: 0;
+    color: rgb(45, 210, 207);
+}
+
+.wel span {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.wel span:hover {
+    transform: scale(1.3);
+}
+
+.para {
+    font-size: 1.5rem; /* Adjust as needed */
+    color: white;
+    margin-top: 20px;
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+    .wel {
+        font-size: 1.8rem; /* Reduce font size for mobile */
+    }
+
+    .para {
+        font-size: 1.2rem;
+    }
+
+    .wel span {
+        display: inline; /* Ensure spans don't disrupt text flow */
+        transform: none; /* Disable the transform on mobile */
+    }
+
+    .AstronautImage {
+        width: 300px; /* Adjust size for mobile view */
+    }
+}

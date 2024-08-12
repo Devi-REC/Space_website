@@ -26,11 +26,6 @@ body, html {
   margin-top: 20px;
 }
 
-.welcome-message .wel {
-  font-size: 3em;
-  margin: 0;
-  animation: colorChange 8s infinite, moveIn 1s ease-out;
-}
 .welcome-message .wel span {
   display: inline-block;
   animation: letterIn 1s forwards;
@@ -98,10 +93,11 @@ body, html {
 
 .welcome-message {
   position: absolute;
-  top:10%;
+  top:3%;
   width: 100%;
   z-index: 1;
 }
+
 
 
 .stars, .twinkling {

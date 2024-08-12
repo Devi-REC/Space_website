@@ -57,12 +57,41 @@ export const Desc = styled.div`
     }
 `;
 
+export const CardCont = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    
+    margin-bottom: 10px;
+    box-shadow: 
+        1px 4px 8px rgb(45, 210, 207), /* Shadow on bottom and right */
+        0 -4px 8px rgb(45, 210, 207); /* Shadow on top */
+    max-height: 100px; /* Set a max-height */
+     /* Enable vertical scrolling */
+    padding: 10px;
+    border: 0.1px solid rgb(45, 210, 207);
+    width: 100%; /* Ensure it takes up the full width */
+    
+    /* Media Query for Mobile View */
+    @media (max-width: 960px) {
+     justify-content: flex-start;
+      padding: 10px;
+       display: flex;
+       frex-wrap:wrap;
+         overflow-x: auto;
+        overflow-y: auto; /* Enable horizontal scrolling if needed */
+        max-height: none; /* Remove max-height on smaller screens */
+    }
+`;
 export const CardContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 28px;
     flex-wrap: wrap;
+     margin-bottom: 10px;
+    
     box-shadow: 
         1px 4px 8px rgb(45, 210, 207), /* Shadow on bottom and right */
         0 -4px 8px rgb(45, 210, 207); /* Shadow on top */
@@ -79,7 +108,8 @@ export const ToggleButtonGroup = styled.div`
     display: flex;
     justify-content: center;
     gap: 4px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    
 `;
 
 // Style for each toggle button

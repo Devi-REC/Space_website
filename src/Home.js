@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './App.css';
+import './Home.css';
 import GalaxyAnimation from './GalaxyAnimation';
 import Header from './Header';
 import UpcomingEvents from './UpcomingEvents';
@@ -46,7 +46,7 @@ function Home() {
       <GalaxyAnimation />
       <Header />
       <div className="welcome-message">
-        <h1 className="wel" ref={welcomeRef}>Welcome to Space Adventures</h1>
+        <h1 className="wel" ref={welcomeRef}>Welcome to Space-Adventures</h1>
         <p className='para'>Explore the universe with us!</p>
         <AstronautImage src={astronaut} alt="Astronaut"/>
         <UpcomingEvents events={events} />
